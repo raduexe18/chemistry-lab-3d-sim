@@ -1,0 +1,557 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #fafafa;
+  background-color: #212121;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html
+{
+  overflow: hidden;
+  color: #fafafa;
+}
+
+#debug
+{
+  display: block;
+  color: #fafafa;
+  position: absolute;
+  float: left;
+  top: 5%;
+  left: 5%;
+  border: 2px solid #28587B;
+  padding: 20px;
+  background-color: #21212180;
+  min-width: 7vw;
+}
+
+#tooltip
+{
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2%;
+  font-size: 3vh;
+  background: #212121b7;
+  padding: 0.5rem;
+  color: #fafafa;
+  border: 3px solid #28587B;
+  border-radius: 5px;
+  user-select: none;
+  text-align: center;
+}
+
+#controls
+{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  padding: 2vh;
+  gap: 3vh;
+
+
+}
+
+#notebook
+{
+  scrollbar-width:thin;
+  scrollbar-color: #fafafa #aaaaaa;
+  background-color: #fafafa;
+  top:50%;
+  transform: translateY(-50%);
+  width: 45vw;
+  max-height: 90vh;
+  min-height: 90vh;
+  position: absolute;
+  left: -45%;
+  transition: ease-in-out 0.35s;
+  border-radius: 0.5em;
+  color: #111;
+  text-align: center;
+  font-size: 3vh;
+  padding: 1vh;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+h2
+{
+  margin-top: 0.5rem;
+}
+
+h2.title
+{
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+/* #notebook:hover
+{
+  left: -42%;
+} */
+
+#notebook.cover
+{
+  left: 1vh
+}
+
+#open1
+{
+  background-color: #fafafa;
+  width: 10vh;
+  height: 10vh;
+  position: absolute;
+  left: 2%;
+  bottom: 2%;
+  transition: ease-in-out 0.15s;
+  border-radius: 3em;
+}
+
+#open1:hover
+{
+  background-color: #28587B;
+  cursor: pointer;
+}
+
+#open2
+{
+  background-color: #fafafa;
+  width: 10vh;
+  height: 10vh;
+  position: absolute;
+  right: 2%;
+  bottom: 2%;
+  transition: ease-in-out 0.15s;
+  border-radius: 3em;
+}
+
+#open2:hover
+{
+  background-color: #87da72;
+  cursor: pointer;
+}
+
+#open3
+{
+  background-color: #fafafa;
+  width: 10vh;
+  height: 10vh;
+  position: absolute;
+  left: 2%;
+  top: 2%;
+  transition: ease-in-out 0.15s;
+  border-radius: 3em;
+}
+
+#open3:hover
+{
+  background-color: #FFE45E;
+  cursor: pointer;
+}
+
+#open4
+{
+  background-color: #fafafa;
+  width: 10vh;
+  height: 10vh;
+  position: absolute;
+  left: 2%;
+  bottom: 2%;
+  transition: ease-in-out 0.15s;
+  border-radius: 3em;
+}
+
+#open4:hover
+{
+  background-color: #28587B;
+  cursor: pointer;
+}
+
+#open5
+{
+  background-color: #fafafa;
+  width: 10vh;
+  height: 10vh;
+  position: absolute;
+  right: 2%;
+  bottom: 2%;
+  transition: ease-in-out 0.15s;
+  border-radius: 3em;
+}
+
+#open5:hover
+{
+  background-color: #87da72;
+  cursor: pointer;
+}
+
+#open6
+{
+  background-color: #fafafa;
+  width: 10vh;
+  height: 10vh;
+  position: absolute;
+  left: 2%;
+  top: 2%;
+  transition: ease-in-out 0.15s;
+  border-radius: 3em;
+}
+
+#open6:hover
+{
+  background-color: #FFE45E;
+  cursor: pointer;
+}
+
+
+#chart
+{
+  background-color: #fafafa;
+  top:50%;
+  transform: translateY(-50%);
+  width: 45vw;
+  max-height: 90vh;
+  min-height: 90vh;
+  position: absolute;
+  right: -45%;
+  transition: ease-in-out 0.35s;
+  border-radius: 0.5em;
+  color: #111;
+  text-align: center;
+  font-size: 3vh;
+  padding: 4vh;
+  box-sizing: border-box;
+}
+
+#chart.cover
+{
+  right: 1vh;
+}
+
+#interface
+{
+  display: block !important;
+}
+
+#tutorial
+{
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width:thin;
+  scrollbar-color: #fafafa #aaaaaa;
+  background-color: #fafafa;
+  left:1vh;
+  transform: translateY(-50%);
+  width: 45vw;
+  max-height: 90vh;
+  min-height: 90vh;
+  position: absolute;
+  top: -45%;
+  transition: ease-in-out 0.35s;
+  border-radius: 0.5em;
+  color: #111;
+  text-align: left;
+  font-size: .9em;
+  padding: 2.5vh;
+  padding-top: 7vh;
+  padding-bottom: 7vh;
+  box-sizing: border-box;
+}
+
+#tutorial *:hover
+{
+  cursor: text;
+}
+
+#tutorial.cover
+{
+  top: 50%;
+}
+
+
+.btn
+{
+  display: block;
+  font-size: 3.5vh;
+  padding: 1rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  background-color: #fafafa;
+  color: #28587B;
+  border-radius: 5px;
+  user-select: none;
+  box-sizing: border-box;
+
+  transition: ease-in-out 0.15s;
+
+}
+
+.btn:hover
+{
+  background-color: #28587B;
+  color: #fafafa;
+  cursor: pointer;
+}
+
+#capacity
+{
+  display: block;
+  position: absolute;
+  font-size: 5vh;;
+  top: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #21212180;
+  border: 3px solid #28587B;
+  border-radius: 5px;
+  padding: 0.5rem;
+  user-select: none;
+  text-align: center;
+  color: #fafafa;
+}
+
+.hidden
+{
+  display: none !important;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.vanilla:hover {
+  filter: drop-shadow(0 0 2em #3178c6aa);
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+#part0 
+{
+  position: absolute;
+  width: 75vw;
+  height: 75vh;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  /* background-color: #fafafa; */
+  transition: ease-in-out 0.15s;
+}
+
+#part0 > *
+{
+  background-color: #fafafa;
+  color: #28587B;
+  height: 100%;
+  width: 45%;
+  text-align: center;
+  line-height: 75vh;
+  font-size: 4vh;
+  border-radius: 0.5em;
+  font-weight: 500;
+  transition: ease-in-out 0.15s;
+}
+
+#part0 > *:hover
+{
+  background-color: #28587B;
+  color: #fafafa;
+  cursor: pointer;
+}
+
+#temp
+{
+  position: absolute;
+  left: 25%;
+  bottom: 5%;
+  width: 5vw;
+  height: 5vh;
+
+  background: #212121b7;
+  padding: 0.5rem;
+  color: #fafafa;
+  border: 3px solid #28587B;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 5vh;
+
+  font-size: 1.5em;
+
+}
+
+#heat
+{
+  position: absolute;
+  right: 25%;
+  bottom: 5%;
+  box-shadow:inset 0px 0px 0px 4px transparent;
+}
+
+#note2
+{
+  scrollbar-width:thin;
+  scrollbar-color: #fafafa #aaaaaa;
+  background-color: #fafafa;
+  top:50%;
+  transform: translateY(-50%);
+  width: 45vw;
+  max-height: 90vh;
+  min-height: 90vh;
+  position: absolute;
+  left: -45%;
+  transition: ease-in-out 0.35s;
+  border-radius: 0.5em;
+  color: #111;
+  text-align: center;
+  font-size: 3vh;
+  padding: 1vh;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+#note2.cover
+{
+  left: 1vh
+}
+
+#tutorial2
+{
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width:thin;
+  scrollbar-color: #fafafa #aaaaaa;
+  background-color: #fafafa;
+  left:1vh;
+  transform: translateY(-50%);
+  width: 45vw;
+  max-height: 90vh;
+  min-height: 90vh;
+  position: absolute;
+  top: -45%;
+  transition: ease-in-out 0.35s;
+  border-radius: 0.5em;
+  color: #111;
+  text-align: left;
+  font-size: .9em;
+  padding: 2.5vh;
+  padding-top: 7vh;
+  padding-bottom: 7vh;
+  box-sizing: border-box;
+}
+
+#tutorial2 *:hover
+{
+  cursor: text;
+}
+
+#tutorial2.cover
+{
+  top: 50%;
+}
+
+#chart2
+{
+  background-color: #fafafa;
+  top:50%;
+  transform: translateY(-50%);
+  width: 45vw;
+  max-height: 90vh;
+  min-height: 90vh;
+  position: absolute;
+  right: -45%;
+  transition: ease-in-out 0.35s;
+  border-radius: 0.5em;
+  color: #111;
+  text-align: center;
+  font-size: 3vh;
+  padding: 4vh;
+  box-sizing: border-box;
+}
+
+#chart2.cover
+{
+  right: 1vh;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
