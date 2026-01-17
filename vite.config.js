@@ -1,4 +1,4 @@
 export default
 {
-    base: "/chemistry/"
+    base: '/chemistry-lab-3d-sim/'
 }
