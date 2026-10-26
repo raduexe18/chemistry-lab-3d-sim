@@ -2,6 +2,8 @@
 
 An interactive 3D web application that simulates a chemical kinetics laboratory. Users run virtual experiments and use the collected data to determine **reaction orders** and **activation energy**, directly in the browser.
 
+**[Live demo](https://raduexe18.github.io/chemistry-lab-3d-sim/)**
+
 **Award:** 3rd Place at the Student Scientific Communication Sessions (Faculty of Chemical Engineering) and Honorable Mention (Faculty of Automatic Control), Polytechnic University of Bucharest.
 
 ## Features
@@ -63,9 +65,12 @@ The build output is written to the `dist/` folder.
 
 <!-- TODO: after checking src/, replace the line above with 4-6 lines naming the real modules (scene setup, liquid/CSG, experiment logic, regression/charts). -->
 
-## Demo
+## Live demo
 
-<!-- TODO: add a live demo link if the workflow in .github/workflows deploys to GitHub Pages, plus 2-3 screenshots or a short GIF. -->
+Try it in your browser, no installation needed: **https://raduexe18.github.io/chemistry-lab-3d-sim/**
+
+<!-- TODO: add 2-3 screenshots or a short GIF of the experiments here. -->
+
 
 ## Project status
 
